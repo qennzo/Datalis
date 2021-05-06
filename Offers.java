@@ -1,5 +1,6 @@
 /* DATALIS OFFERS TABLE */
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Offers {
@@ -12,8 +13,9 @@ public class Offers {
     private String info;
     private Date fechaPublicacion;
     private Date fechaExpiracion;
+    private ArrayList<Offers> listaOfertas;
 
-    /* CONSTRUCTOR */
+    /* CONSTRUCTOR*/
     public Offers(int idOffer, int idAdmin, String descripcion, String especialidad, String info, Date fechaPublicacion, Date fechaExpiracion) {
         this.idOffer = idOffer;
         this.idAdmin = idAdmin;
@@ -24,6 +26,15 @@ public class Offers {
         this.fechaExpiracion = fechaExpiracion;
     }
 
+    /* MÉTODOS */
+    public void addOferta(Offers o){
+        if(!listaOfertas.contains(o)){
+            listaOfertas.add(o);
+        } else {
+            System.err.println("Esta oferta ya existe.");
+        }
+    }
+    
     /* GETTERS Y SETTERS */
     public int getIdOffer() {
         return idOffer;
@@ -80,4 +91,20 @@ public class Offers {
     public void setFechaExpiracion(Date fechaExpiracion) {
         this.fechaExpiracion = fechaExpiracion;
     }
+
+    public ArrayList<Offers> getListaOfertas() {
+        return listaOfertas;
+    }
+
+    public void setListaOfertas(ArrayList<Offers> listaOfertas) {
+        this.listaOfertas = listaOfertas;
+    }
+    
+    /* TOSTRING*/
+
+    @Override
+    public String toString() {
+        return "-------------------------" + "Nº de Oferta: " + idOffer + "\nDescripción: " + descripcion + "\nEspecialidad: " + especialidad + "\nInfo: " + info + "\nFecha de publicación=: " + fechaPublicacion + "\nFecha de expiración: " + fechaExpiracion + "-------------------------";
+    }
 }
+
