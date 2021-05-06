@@ -2,20 +2,33 @@
 
 public class Users {
     
+    /* VARIABLES */
+    private int idUser;
     private String dni;
     private String nombre;
     private String apellidos;
     private String email;
-    private String tlf;
+    private int tlf;
     private String password;
 
-    public Users(String dni, String nombre, String apellidos, String email, String tlf, String password) {
+    /* CONSTRUCTOR */
+    public Users(int idUser, String dni, String nombre, String apellidos, String email, int tlf, String password) {
+        this.idUser = idUser;
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
-        this.tlf = tlf; 
+        this.tlf = tlf;
         this.password = password;
+    }
+
+    /* GETTERS Y SETTERS */
+    public int getIdUser() {
+        return idUser;
+    }
+
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 
     public String getDni() {
@@ -50,11 +63,11 @@ public class Users {
         this.email = email;
     }
 
-    public String getTlf() {
+    public int getTlf() {
         return tlf;
     }
 
-    public void setTlf(String tlf) {
+    public void setTlf(int tlf) {
         this.tlf = tlf;
     }
 
