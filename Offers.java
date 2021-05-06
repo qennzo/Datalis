@@ -13,7 +13,7 @@ public class Offers {
     private Date fechaPublicacion;
     private Date fechaExpiracion;
 
-    /* CONSTRUCTOR*/
+    /* CONSTRUCTOR */
     public Offers(int idOffer, int idAdmin, String descripcion, String especialidad, String info, Date fechaPublicacion, Date fechaExpiracion) {
         this.idOffer = idOffer;
         this.idAdmin = idAdmin;
