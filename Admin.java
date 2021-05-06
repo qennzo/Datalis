@@ -2,20 +2,33 @@
 
 public class Admin {
     
+    /* VARIABLES */
+    private int idAdmin;
     private String dni;
     private String nombre;
     private String apellidos;
     private String email;
-    private String tlf;
+    private int tlf;
     private String password;
 
-    public Admin(String dni, String nombre, String apellidos, String email, String tlf, String password) {
+    /* CONSTRUCTOR */
+    public Admin(int idAdmin, String dni, String nombre, String apellidos, String email, int tlf, String password) {
+        this.idAdmin = idAdmin;
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.email = email;
         this.tlf = tlf;
         this.password = password;
+    }
+
+    /* GETTERS Y SETTERS */
+    public int getIdAdmin() {
+        return idAdmin;
+    }
+
+    public void setIdAdmin(int idAdmin) {
+        this.idAdmin = idAdmin;
     }
 
     public String getDni() {
@@ -50,11 +63,11 @@ public class Admin {
         this.email = email;
     }
 
-    public String getTlf() {
+    public int getTlf() {
         return tlf;
     }
 
-    public void setTlf(String tlf) {
+    public void setTlf(int tlf) {
         this.tlf = tlf;
     }
 
